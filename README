@@ -1,0 +1,35 @@
+This code reads from the card swipe, searches a mysql database for an entry for the swiped card and opens the door if there is an entry. 
+Also, if there is a valid entry, the (id,fist name,last name,swipe id) will be sent to anyone listening to port 1337.
+
+Keyboard setup:
+  99-input.rules
+Add 99-input.rules to /etc/udev/rules.d/
+This will let the group "input" read the raw keyboard events. 
+Add the door user to this group.
+
+Main loop:
+  main.c
+  FDlist.h
+  FDlist.c
+
+Arduino interface:
+  Arduino.c
+  Arduino.h
+  DoorMessage.h
+  SerialLink.c
+  SerialLink.h
+
+SQL interface:
+  MySQL.c
+  MySQL.h
+
+Client listeners interface:
+  NetServer.c
+  NetServer.h
+
+Card swipe interface:
+  Swipe.c
+  Swipe.h
+  ReadKeyBoard.c
+  ReadKeyBoard.h
+
